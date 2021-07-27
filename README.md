@@ -9,7 +9,7 @@ Add the component to your Hugo site's config:
 ```toml
 [module]
 [[module.imports]]
-path = "github.com/gohugoio/hugo-mod-bootstrap-scss-v4"
+path = "github.com/interexchange/hugo-mod-bootstrap-scss-v4"
 ```
 
 The Bootstrap SCSS will be mounted in `assets/scss/bootstrap`, so you can then import either all:
@@ -62,6 +62,22 @@ Or only what you need:
 ```
 
 
+### JS Bundles
+
+The Bootstrap JS bundles will be mounted in `assets/js/bootstrap`. Within Hugo pages
+you can import it as follows to deliver one combined JS file for your site.
+
+```html
+{{ $bootstrap := resources.Get "js/bootstrap/bootstrap.bundle.js" }}
+{{ $your_js := resources.Get "js/your_js/main.js" }}
+{{ $defaultJS := slice $bootstrap $your_js | resources.Concat "js/global.js" }}
+{{ $globalJS := $defaultJS | resources.Minify | resources.Fingerprint }}
+
+<script src="{{ $globalJS.Permalink }}" integrity="{{ $globalJS.Data.Integrity }}"></script>
+```
+
 ## Versions
 
-This repository will be versioned following the minor and patch versions in the v4 series of Bootstrap.
+This repository is a fork of https://github.com/gohugoio/hugo-mod-bootstrap-scss-v4 to explore bootstrap js, inspired by https://github.com/denolteholding/hugo-mod-bootstrap-scss-js-v5.
+
+Please refer to the original repository for proper update cycles and maintenance.

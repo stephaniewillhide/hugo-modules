@@ -8,3 +8,6 @@ path="github.com/twbs/bootstrap"
 [[module.imports.mounts]]
 source = "scss"
 target = "assets/scss/bootstrap"
+[[module.imports.mounts]]
+source = "dist/js"
+target = "assets/js/bootstrap"
