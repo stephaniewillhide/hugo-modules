@@ -1,5 +1,10 @@
 [module]
 [[module.imports]]
+path="github.com/js-cookie/js-cookie"
+[[module.imports.mounts]]
+source = "src"
+target = "assets/js/js-cookie"
+[[module.imports]]
 path="github.com/jquery/jquery"
 [[module.imports.mounts]]
 source = "dist"
