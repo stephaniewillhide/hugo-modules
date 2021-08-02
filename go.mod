@@ -1,4 +1,4 @@
-module github.com/interexchange/hugo-mod-bootstrap-scss-v4
+module github.com/interexchange/hugo-modules
 
 go 1.13
 
