@@ -4,15 +4,13 @@ path="github.com/js-cookie/js-cookie"
 [[module.imports.mounts]]
 source = "src"
 target = "assets/js/js-cookie"
+
 [[module.imports]]
 path="github.com/jquery/jquery"
 [[module.imports.mounts]]
 source = "dist"
 target = "assets/js/jquery"
-[[module.mounts]]
-# Workaround for https://github.com/gohugoio/hugo/issues/6945
-source = "assets/scss/bootstrap/_vendor"
-target = "assets/scss/bootstrap/vendor"
+
 [[module.imports]]
 path="github.com/twbs/bootstrap"
 [[module.imports.mounts]]
@@ -21,3 +19,7 @@ target = "assets/scss/bootstrap"
 [[module.imports.mounts]]
 source = "dist/js"
 target = "assets/js/bootstrap"
+[[module.mounts]]
+# Workaround for https://github.com/gohugoio/hugo/issues/6945
+source = "assets/scss/bootstrap/_vendor"
+target = "assets/scss/bootstrap/vendor"

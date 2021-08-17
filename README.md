@@ -1,16 +1,33 @@
-This is a [Hugo Components](https://gohugo.io/hugo-modules/) that packages the [Bootstrap v4](https://getbootstrap.com/docs/4.4/getting-started/introduction/) SCSS source ready to be used in Hugo.
+This is a [Hugo Components](https://gohugo.io/hugo-modules/) that packages a variety of libaries commonly in use at InterExchange.
+
+- [Bootstrap v4](https://github.com/twbs/bootstrap)
+- [jQuery](https://github.com/jquery/jquery)
+- [js-cookie](https://github.com/js-cookie/js-cookie)
 
 You need the Hugo extended version and Go to use this component.
 
-## Use
+## Development
+
+We may want to add more libaries to these modules over time.
+
+Following the [Use Hugo Modules Docs](https://gohugo.io/hugo-modules/use-modules/) to learn more about the system.
+
+1. Add Module to config.toml
+
+
+## Usage
+
+### CSS Bundles
 
 Add the component to your Hugo site's config:
 
 ```toml
 [module]
-[[module.imports]]
-path = "github.com/interexchange/hugo-mod-bootstrap-scss-v4"
+  [[module.imports]]
+    path = "github.com/interexchange/hugo-modules"
 ```
+
+#### Twitter Bootstrap
 
 The Bootstrap SCSS will be mounted in `assets/scss/bootstrap`, so you can then import either all:
 
@@ -64,6 +81,8 @@ Or only what you need:
 
 ### JS Bundles
 
+#### Twitter Bootstrap
+
 The Bootstrap JS bundles will be mounted in `assets/js/bootstrap`. Within Hugo pages
 you can import it as follows to deliver one combined JS file for your site.
 
@@ -75,6 +94,8 @@ you can import it as follows to deliver one combined JS file for your site.
 
 <script src="{{ $globalJS.Permalink }}" integrity="{{ $globalJS.Data.Integrity }}"></script>
 ```
+
+#### JS Cookies
 
 ## Versions
 
