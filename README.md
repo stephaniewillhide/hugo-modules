@@ -1,6 +1,6 @@
 This is a [Hugo Components](https://gohugo.io/hugo-modules/) that packages a variety of libaries commonly in use at InterExchange.
 
-- [Bootstrap v4](https://github.com/twbs/bootstrap)
+- [Bootstrap v5](https://github.com/twbs/bootstrap)
 - [jQuery](https://github.com/jquery/jquery)
 - [js-cookie](https://github.com/js-cookie/js-cookie)
 - [Font Awesome](https://github.com/FortAwesome/Font-Awesome/)
